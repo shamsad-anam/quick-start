@@ -28,14 +28,14 @@
 // media query manager
 // basecode > tab-land > tab-port > phone (screen size comparison)
 
-@mixin respondMin($br) {
-  @media only screen and (min-width: $br) {
+@mixin respondBetween($min) {
+  @media only screen and (min-width: $min) and (max-width: $max) {
     @content;
   }
 }
 
-@mixin respondBetween($min) {
-  @media only screen and (min-width: $min) and (max-width: $max) {
+@mixin respondMin($br) {
+  @media only screen and (min-width: $br) {
     @content;
   }
 }
