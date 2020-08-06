@@ -17,7 +17,7 @@ html {
     font-size: 50%; //1rem = 8px
   }
 
-  @include respondMin(1201px) {
+  @include respondMin(1800px) {
     font-size: 75%; //1rem = 12px
   }
 }
