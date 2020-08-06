@@ -1,5 +1,10 @@
-@import "base";
+@import "abstracts/mixins";
+@import "abstracts/variables";
 
-@import "mixins";
+@import "base/base";
+@import "base/typography";
 
-@import "typography";
+@import "components/buttons";
+
+@import "layout/header";
+@import "layout/footer";

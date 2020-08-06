@@ -6,21 +6,21 @@
   box-sizing: border-box;
 }
 
-// html {
-//   font-size: 62.5%; //1rem = 10px
+html {
+  font-size: 62.5%; //1rem = 10px
 
-//   @include respond(tab-land) {
-//     font-size: 56.25%; //1rem = 9px
-//   }
+  @include respondMax(767px) {
+    font-size: 56.25%; //1rem = 9px
+  }
 
-//   @include respond(tab-port) {
-//     font-size: 50%; //1rem = 8px
-//   }
+  @include respondMax(575px) {
+    font-size: 50%; //1rem = 8px
+  }
 
-//   @include respond(big-desktop) {
-//     font-size: 75%; //1rem = 12px
-//   }
-// }
+  @include respondMin(1201px) {
+    font-size: 75%; //1rem = 12px
+  }
+}
 
 ul > li {
   list-style: none;

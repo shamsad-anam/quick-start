@@ -1,0 +1,59 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin bgCover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@mixin imgCover {
+  width: 100%;
+  object-fit: cover;
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// media query manager
+// basecode > tab-land > tab-port > phone (screen size comparison)
+
+@mixin respondBetween($min, $max) {
+  @media only screen and (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+@mixin respondMin($br) {
+  @media only screen and (min-width: $br) {
+    @content;
+  }
+}
+
+@mixin respondMax($br) {
+  @media only screen and (max-width: $br) {
+    @content;
+  }
+}
+
+// all the code wriiten(base code) as for the screens between 1200px(75em) to 1800px(112em)
+//desktop first approach
+// if base code is for a bigger screen (than code for screens now to write) then MAX-WIDTH condition is used to write codes for smaller screens than base code
+
+//mobile first approach
+// if base code is for a smaller screen (than code for screens now to write) then MIN-WIDTH condition is used to write codes for bigger screens than base code
